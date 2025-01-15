@@ -79,16 +79,6 @@ export function spawnServer(config: Config, logger: winston.Logger, db: PrismaCl
         res.send(response);
     });
 
-    router.app.get('/public/style.css', (req, res) => {
-        const filePath = path.resolve('./public/style.css');
-        res.sendFile(filePath);
-    });
-
-    router.app.get('/public/script.js', (req, res) => {
-        const filePath = path.resolve('./public/script.js');
-        res.sendFile(filePath);
-    });
-
     // ------------------------------------------------------------------------- //
 
     const port = config.SERVER_PORT;

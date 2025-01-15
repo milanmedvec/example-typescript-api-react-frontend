@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@example/lib-intercom",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint -c .eslintrc.cjs './src/**/*'",
+    "check": "tsc --noEmit && bun run lint"
+  },
+  "exports": {
+    "./routes/note/index": "./dist/routes/note/index.js",
+    "./routes/note/create": "./dist/routes/note/create.js",
+    "./routes/note/[id]/edit": "./dist/routes/note/[id]/edit.js",
+    "./routes/note/[id]/delete": "./dist/routes/note/[id]/delete.js",
+    "./routes/note/[id]/get": "./dist/routes/note/[id]/get.js",
+    "./routes/builder": "./dist/routes/builder.js",
+    "./handlers/response": "./dist/handlers/response.js",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@example/lib-models": "workspace:^",
+    "eslint": "^8",
+    "typescript": "^4.4.2",
+    "zod": "^3.23.8"
+  }
+}

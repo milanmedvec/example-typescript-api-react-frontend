@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 4,
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "./.eslintrc.cjs"
+    }
+}

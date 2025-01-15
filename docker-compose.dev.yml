@@ -1,0 +1,28 @@
+services:
+  example_db:
+    restart: "no"
+    image: postgres
+    container_name: example_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    networks:
+      - example_network
+    ports:
+      - 5432:5432
+
+  example_adminer:
+    restart: "no"
+    image: adminer
+    container_name: example_adminer
+    depends_on:
+      - example_db
+    networks:
+      - example_network
+    ports:
+      - 8080:8080
+
+networks:
+  example_network:
+    name: example_network

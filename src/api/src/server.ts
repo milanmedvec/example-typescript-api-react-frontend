@@ -1,6 +1,5 @@
 // inspired by https://medium.com/_hugoandregg/how-to-setup-an-api-with-nodejs-express-typescript-prisma-and-docker-cc5b2df2a5bb
 
-import path from 'path';
 import type * as winston from 'winston';
 import { extendZodWithOpenApi, OpenApiGeneratorV3, OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
 import express from 'express';
